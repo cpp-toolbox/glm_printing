@@ -2,7 +2,15 @@
 #define GLM_PRINTING_HPP
 
 #include <iostream>
+
+#define GLM_ENABLE_EXPERIMENTAL
+
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtc/constants.hpp>
+
+void print_translation_rotation_scale_of_matrix_transform(const glm::mat4 &transform);
 
 inline std::ostream &operator<<(std::ostream &os, const glm::vec2 &v) { return os << "(" << v.x << ", " << v.y << ")"; }
 
