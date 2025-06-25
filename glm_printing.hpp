@@ -9,6 +9,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/constants.hpp>
+#include <iomanip>
+#include <sstream>
 
 void print_translation_rotation_scale_of_matrix_transform(const glm::mat4 &transform);
 
@@ -17,6 +19,8 @@ inline std::ostream &operator<<(std::ostream &os, const glm::vec2 &v) { return o
 // inline std::ostream &operator<<(std::ostream &os, const glm::vec3 &v) {
 //     return os << "(" << v.x << ", " << v.y << ", " << v.z << ")";
 // }
+
+std::string vec3_to_string(const glm::vec3 &v, int precision = 1);
 
 namespace glm {
 inline std::ostream &operator<<(std::ostream &os, const glm::vec3 &v) {
