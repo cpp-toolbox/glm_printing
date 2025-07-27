@@ -21,6 +21,7 @@ inline std::ostream &operator<<(std::ostream &os, const glm::vec2 &v) { return o
 // }
 
 std::string vec3_to_string(const glm::vec3 &v, int precision = 1);
+std::string vec2_to_string(const glm::vec3 &v, int precision = 1);
 
 namespace glm {
 inline std::ostream &operator<<(std::ostream &os, const glm::vec3 &v) {

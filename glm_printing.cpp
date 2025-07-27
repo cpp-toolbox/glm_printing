@@ -28,6 +28,13 @@ void print_translation_rotation_scale_of_matrix_transform(const glm::mat4 &trans
     std::cout << "Scale: (" << scale.x << ", " << scale.y << ", " << scale.z << ")\n";
 }
 
+std::string vec2_to_string(const glm::vec3 &v, int precision) {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(precision);
+    oss << "(" << v.x << ", " << v.y << ", " << v.z << ")";
+    return oss.str();
+}
+
 std::string vec3_to_string(const glm::vec3 &v, int precision) {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(precision);
