@@ -41,3 +41,20 @@ std::string vec3_to_string(const glm::vec3 &v, int precision) {
     oss << "(" << v.x << ", " << v.y << ", " << v.z << ")";
     return oss.str();
 }
+
+std::string mat4_to_string(const glm::mat4 &m, int precision) {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(precision);
+    for (int row = 0; row < 4; ++row) {
+        oss << "(";
+        for (int col = 0; col < 4; ++col) {
+            oss << m[col][row]; // glm is column-major
+            if (col < 3)
+                oss << ", ";
+        }
+        oss << ")";
+        if (row < 3)
+            oss << "\n";
+    }
+    return oss.str();
+}
